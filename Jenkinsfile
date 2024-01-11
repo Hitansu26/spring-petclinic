@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'MAVEN' 'JDK_17' }
+    agent { label 'MAVEN'  }
     option { 
         ( time: 30, unit: 'MINUTES') 
     }
