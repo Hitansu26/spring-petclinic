@@ -6,8 +6,8 @@ pipeline {
     triggers { pollSCM('* * * * *') }
     stages {
         stage('git-clone') {
-            git url: 'https://github.com/spring-projects/spring-petclinic.git'
-                branch: 'main'
+            git url: 'https://github.com/Hitansu26/spring-petclinic.git'
+                branch: 'dev'
         }
         stage('build') {
             sh 'mvn clean package'
