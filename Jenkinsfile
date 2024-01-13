@@ -5,7 +5,7 @@ pipeline {
     options { timeout(time: 30, unit: 'MINUTE') }
     triggers { pollSCM('* * * * *') }
     stages {
-        stage('git-clone') {
+        stage('git') {
             git url: 'https://github.com/Hitansu26/spring-petclinic.git'
                 branch: 'dev'
         }
