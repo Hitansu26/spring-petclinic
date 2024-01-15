@@ -16,7 +16,12 @@ pipeline {
             steps {
                 sh 'mvn clean package'
             }
-            
+        post {
+            success {
+                archiveArtifacts artifacts: '**/spring-petclinic-*.jar'
+                junit testResults: '**/TEST-*.xml' 
+            }
+        }
         }
     }
 }
