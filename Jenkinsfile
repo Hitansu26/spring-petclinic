@@ -3,7 +3,9 @@ pipeline {
         label { 'MAVEN' }
     }
     options { timeout(time: 30, unit: 'MINUTE') }
-    triggers { pollSCM('* * * * *') }
+    triggers { 
+        pollSCM('* * * * *') 
+    }
     stages {
         stage('git') {
             git url: 'https://github.com/Hitansu26/spring-petclinic.git'
